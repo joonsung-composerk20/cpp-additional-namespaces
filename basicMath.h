@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace bMath{
+namespace bMath {
     //Calculator class
     class Calculator {
         /* Calculator() {
@@ -26,55 +26,41 @@ namespace bMath{
         // and baseCalc() is also private funtion becuase they dont have to call out of the object
         //base calculating coe
         inline int baseCalc(void){
-            // I made this code in inline funtion because there're two times using of this code
+            // I made code in inline funtion because there're two times using of code
             // switch loop
-            switch (o) {
-                // add
-                case ("+"): {
-                    sum = a + b;
-                    break;
-                }
-
-                // substract
-                case ("-"): {
-                    sum = a - b;
-                    break;
-                }
-
-                // multiply
-                case ("*"): {
-                    sum = a * b;
-                    break;
-                }
-
-                // divide
-                case ("/"): {
-                    sum = a / b;
-                    break;
-                }
-
-                //rest
-                case ("%"): {
-                    sum = a % b;
-                    break;
-                }
-
-                // factorial
-                case ("!"): {
-                    // keep multiplying 'i' until i equlas a
-                    for (int i == 1; i == a; i++) {
-                        fac *= i;
-                    }
-                    return (fac);
-                    break;
-                }
-
-                // default part(error message)
-                default: {
-                    cout << "error:while processing inline calculate..." << endl;
-                    break;
-                }
+            if (o == '+') {
+                sum = a + b;
             }
+
+            else if (o == '-') {
+                sum = a - b;
+            }
+
+            else if (o == '*') {
+                sum = a * b;
+            }
+
+            else if (o == '/') {
+                sum = a / b;
+            }
+
+            else if (o == '%') {
+                sum = a % b;
+            }
+
+            else if (o == '!') {
+                for (int i = 1; i == a; i++) {
+                    fac *= i;
+                }
+
+                sum = fac;
+            }
+
+            else {
+                cout << "error:while processing inline calculate..." << endl;
+            }
+
+            return (sum);
         }
 
         // public
@@ -109,7 +95,6 @@ namespace bMath{
             baseCalc();
         }
     };
-
     //special calculator class
     class specialCalculator {
 
@@ -129,12 +114,12 @@ namespace bMath{
         // basic Calculation to get prime number
         // code for prime number calculate
         // only depending inline-form funtion because they dont need for user
-        inline primeCalculatePlus(void) {
-            return (6 * this.x + 1);
+        inline int primeCalculatePlus(void) {
+            return (6 * x + 1);
         }
 
-        inline primeCalculateMinus(void) {
-            return (6 * this.x - 1);
+        inline int primeCalculateMinus(void) {
+            return (6 * x - 1);
         }
 
         // *prime number funtion*
@@ -146,214 +131,214 @@ namespace bMath{
 
             // 0 and 1 isnt prime number
             if ((x == 1)) {
-                this.b = false;
+                b = false;
             }
 
             // negative number and 0 isnt prime number
             else if (x <= 0) {
-                this.b = false;
+                b = false;
             }
             
             // 2  is prime number
             else if (x == 2) {
-                this.b = true;
+                b = true;
             }
 
             // if the rest of divided 2, its prime number
             else if ((x % 2) == 0) {
-                this.b = true;
+                b = true;
             }
 
             // or not, its not prime number
             else if ((x % 2) == 1) {
-                this.b == false;
+                b == false;
             }
 
             // were same numbers multiplied, it is not prime number
-            else if () {
-                this.i = 1;
+            else if (b = false) {
+             i = 1;
                 do {
-                    this.j = this.i * this.i;
-                    if (this.x == this.j) {
-                        this.b = true;
+                 j = i * i;
+                    if  (x == j) {
+                     b = true;
                         break;
                     }
-                    else if (this.x < this.j) {
-                        this.b = false;
+                    else if  (x < j) {
+                     b = false;
                         break;
                     }
                     
-                    this.i++;
-                } while (i == 128)
+                 i++;
+                } while (i == 128);
             }
 
             // all prime numbers are made with 6n+1 or 6n-1
-            else if () {
-                if (primeCalculatePlus() == this.x) {
-                    this.b = true;
+            else if (b = false) {
+                if (primeCalculatePlus() == x) {
+                 b = true;
                 }
 
-                else if (primeCalculateMinus() == this.x) {
-                    this.b = true;
+                else if (primeCalculateMinus() == x) {
+                 b = true;
                 }
             }
 
             // otherwise, its not prime number
             else {
-                this.b = false;
+             b = false;
             }
         
             // return b(bool)
-            return this.b;
+            return b;
             }
-        }
+        
 
         //prime number-inline
         inline bool primeNumber(int x) {
             // 0 and 1 isnt prime number
             if ((x == 1)) {
-                this.b = false;
+             b = false;
             }
 
             // negative number and 0 isnt prime number
             else if (x <= 0) {
-                this.b = false;
+             b = false;
             }
             
             // 2  is prime number
             else if (x == 2) {
-                this.b = true;
+             b = true;
             }
 
             // if the rest of divided 2, its prime number
             else if ((x % 2) == 0) {
-                this.b = true;
+             b = true;
             }
 
             // or not, its not prime number
             else if ((x % 2) == 1) {
-                this.b == false;
+             b == false;
             }
 
             // were same numbers multiplied, it is not prime number
-            else if () {
-                this.i = 1;
+            else if (b = false) {
+             i = 1;
                 do {
-                    this.j = this.i * this.i;
-                    if (this.x == this.j) {
-                        this.b = true;
+                 j = i * i;
+                    if  (x == j) {
+                     b = true;
                         break;
                     }
-                    else if (this.x < this.j) {
-                        this.b = false;
+                    else if  (x < j) {
+                        b = false;
                         break;
                     }
                     
-                    this.i++;
-                } while (i == 128)
+                 i++;
+                } while (i == 128);
             }
 
             // all prime numbers are made with 6n+1 or 6n-1
-            else if () {
-                if (primeCalculatePlus() == this.x) {
-                    this.b = true;
+            else if (b = false) {
+                if (primeCalculatePlus() == x) {
+                 b = true;
                 }
 
-                else if (primeCalculateMinus() == this.x) {
-                    this.b = true;
+                else if (primeCalculateMinus() == x) {
+                 b = true;
                 }
             }
 
             // otherwise, its not prime number
             else {
-                this.b = false;
+             b = false;
             }
         
             // return b(bool)
-            return this.b;
+            return b;
             }
 
         // Linear equation-normal
         int Linear_equation(void) {
             //left side
             cout << "the count of the character(x) on the left side: ";
-            cin >> this.lcc;
+            cin >> lcc;
 
-            cout << "value of the constant term on the left side: "
-            cin >> this.lvct;
+            cout << "value of the constant term on the left side: ";
+            cin >> lvct;
 
             //right side
             cout << "the count of the character(x) on the right side: ";
-            cin >> this.rcc;
+            cin >> rcc;
 
-            cout << "value of the constant term on the right side: "
-            cin >> this.rvct;
+            cout << "value of the constant term on the right side: ";
+            cin >> rvct;
 
             //calculate
-            this.x = this.lcc - this.rcc;
-            this.y = this.lvct - this.rvct;
+         x = lcc - rcc;
+         y = lvct - rvct;
 
-            return (this.y / this.x);
+            return  (y / x);
         }
 
         // Linear equation-inline
         inline int Linear_equation(int lcc, int lvct, int rcc, int rvct) {
-            this.x = this.lcc - this.rcc;
-            this.y = this.lvct - this.rvct;
+         x = lcc - rcc;
+         y = lvct - rvct;
 
-            return (this.y / this.x);
+            return  (y / x);
         }
 
         // Fracion calculate-normal
         void Fraction(void) {
             cout << "First fraction's denominator: ";
-            cin >> this.x;
+            cin >> x;
 
             cout << "First fraction's numerator: ";
-            cin >> this.i;
+            cin >> i;
 
             cout << "Second fraction's denominator: ";
-            cin >> this.y;
+            cin >> y;
 
             cout << "Second fraction's numerator: ";
-            cin >> this.j;
+            cin >> j;
 
-            if (this.x == this.y) {
-                this.up = this.i + this.j;
-                this.down = this.x;
+            if  (x == y) {
+             up = i + j;
+             down = x;
 
-                cout << this.up << "/" << this.down << endl;
+                cout << up << "/" << down << endl;
             }
-            else if (this.x != this.y) {
-                this.i *= this.y;
-                this.j *= this.x;
+            else if  (x != y) {
+             i *= y;
+             j *= x;
 
-                this.up = this.i + this.j;
-                this.down = this.x * this.y;
+             up = i + j;
+             down = x * y;
 
-                cout << this.up << "/" << this.down << endl; 
+                cout << up << "/" << down << endl; 
             }
             return;
         }
 
         // Fraction calculate-inline
         inline void Fraction(int x, int y, int i, int j) {
-            if (this.x == this.y) {
-                this.up = this.i + this.j;
-                this.down = this.x;
+            if  (x == y) {
+             up = i + j;
+             down = x;
 
-                cout << this.up << "/" << this.down << endl;
+                cout << up << "/" << down << endl;
             }
-            else if (this.x != this.y) {
-                this.i *= this.y;
-                this.j *= this.x;
+            else if  (x != y) {
+             i *= y;
+             j *= x;
 
-                this.up = this.i + this.j;
-                this.down = this.x * this.y;
+             up = i + j;
+             down = x * y;
 
-                cout << this.up << "/" << this.down << endl; 
+                cout << up << "/" << down << endl; 
             }
             return;
         }
-    }
+    };
 }
