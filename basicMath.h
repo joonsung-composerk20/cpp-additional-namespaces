@@ -7,6 +7,7 @@
 using namespace std;
 
 namespace bMath {
+    
     //Calculator class
     class Calculator {
         /* Calculator() {
@@ -95,34 +96,27 @@ namespace bMath {
             baseCalc();
         }
     };
+   
     //special calculator class
     class specialCalculator {
 
-        // define variables
+        public:
+        /* specialCalculator() {
+            cout << "*command usage*" << endl;
+            cout << "pn : judge is the number 'prime number'" << endl;
+            cout << "le" : solve Liear equation << endl;
+            cout << "fc : fraction calculating" << endl;
+        } */
+
+        // base variable
         int x, y;
+
+        // for fraction
         int up, down;
+
+        // for equation
         int lcc, rcc, lvct, rvct;
-        int i, j;
-        bool b;
-            /* specialCalculator() {
-                cout << "*command usage*" << endl;
-                cout << "pn : judge is the number 'prime number'" << endl;
-                cout << "le" : solve Liear equation << endl;
-                cout << "fc : fraction calculating" << endl;
-            } */
-
-        // basic Calculation to get prime number
-        // code for prime number calculate
-        // only depending inline-form funtion because they dont need for user
-        inline int primeCalculatePlus(void) {
-            return (6 * x + 1);
-        }
-
-        inline int primeCalculateMinus(void) {
-            return (6 * x - 1);
-        }
-
-        // *prime number funtion*
+                // *prime number funtion*
         // prime number-normal
         bool primeNumber(void) {
             //input number
@@ -339,6 +333,21 @@ namespace bMath {
                 cout << up << "/" << down << endl; 
             }
             return;
+        }
+
+
+        private:
+        int i, j;
+        bool b;
+        // basic Calculation to get prime number
+        // code for prime number calculate
+        // only depending inline-form funtion because they dont need for user
+        inline int primeCalculatePlus(void) {
+            return (6 * x + 1);
+        }
+
+        inline int primeCalculateMinus(void) {
+            return (6 * x - 1);
         }
     };
 }

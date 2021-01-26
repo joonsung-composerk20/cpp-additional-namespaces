@@ -3,3 +3,11 @@
 
 using namespace std;
 using namespace bMath;
+
+namespace Emath {
+    class ExpertCalculator : Calculator {
+        /* ExpertCalculator() {
+            ""
+        } */
+    };
+}
