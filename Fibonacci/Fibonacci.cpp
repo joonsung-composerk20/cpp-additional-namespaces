@@ -3,3 +3,7 @@
 
 using namespace std;
 using namespace Fibonacci;
+
+int main(void) {
+    // codes....
+}
